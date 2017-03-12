@@ -1,0 +1,103 @@
+full_text=
+separator=false
+separator_block_width=7
+border_top=0
+border_left=0
+border_right=0
+border_bottom=1
+
+[window title]
+command=xdotool getactivewindow getwindowname
+interval=1
+color=#666666
+min_width=200
+align=right
+
+[separator]
+
+[gmail]
+label= 
+command=$HOME/.config/i3blocks/blocklets/gmail_checker.py
+interval=10
+border=#999999
+
+[separator]
+
+[vk]
+label= 
+command=$HOME/.config/i3blocks/blocklets/vk_counter.py
+interval=5
+border=#999999
+
+[separator]
+
+[volume]
+label= 
+command=$HOME/.config/i3blocks/blocklets/volume.sh
+interval=5
+signal=1
+markup=pango
+border=#999999
+
+[separator]
+
+[vpn]
+label= 
+command=$HOME/.config/i3blocks/blocklets/vpn.sh
+interval=5
+markup=pango
+border=#999999
+
+[separator]
+
+[hdd]
+label= 
+instance=/
+command=/usr/share/i3blocks/disk
+interval=5
+markup=pango
+border=#999999
+
+[home]
+label= 
+instance=/home/
+command=/usr/share/i3blocks/disk
+interval=5
+markup=pango
+border=#999999
+
+[separator]
+
+[temperature]
+label= 
+command=echo "$($HOME/scripts/temperature.sh 'Core 0') $($HOME/scripts/temperature.sh 'Core 1') "
+interval=5
+border=#999999
+
+[separator]
+
+[loadavg]
+label= ⌛
+command=cat /proc/loadavg|awk '{print $1, $2, $3}'
+interval=5
+border=$999999
+
+[separator]
+
+[time]
+label= 
+command=$HOME/.config/i3blocks/blocklets/time.sh
+interval=1
+markup=pango
+border=#999999
+separator_block_width=0
+
+[separator]
+
+[layout]
+label=
+command=$HOME/.config/i3blocks/blocklets/layout.sh
+interval=1
+border=#999999
+
+
